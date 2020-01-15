@@ -1,0 +1,8 @@
+
+import { AppConfig } from 'blockstack'
+
+export const appConfig = new AppConfig(['store_write', 'publish_data'])
+
+export const TASKS_FILENAME = 'tasks.json'
+
+export const EXPLORER_URL = 'https://kim.test.blockstack.org'
