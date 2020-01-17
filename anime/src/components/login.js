@@ -1,27 +1,16 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import Style from 'styled-components';
 import { buttonColor, bgColor, borderColor, labelColor, mainFont, loginButtonText } from './styles/variables'
-import { UserSession } from 'blockstack';
-import { appConfig } from '../config/appConfig.js'
-
-
-const Login = () => {
-
-    const userSession = new UserSession({ appConfig })
-
-
-    const handleSignIn = (e) => {
-        e.preventDefault();
-        userSession.redirectToSignIn();
-    }
 
 
 
-    const handleSignOut = (e) => {
-        e.preventDefault();
-        userSession.signUserOut(window.location.origin);
-    }
+const Login = (props) => {
 
+    useEffect(() => {
+   console.log(props)
+    },[props])
+
+    console.log(props)
     return (
     <div className ="intro">
         <div className="panel-landing" id="section-1">
@@ -30,7 +19,7 @@ const Login = () => {
             <button
                 className="btn btn-primary btn-lg"
                 id="signin-button"
-                onClick={handleSignIn}
+                onClick={props.signIn}
             >
                 Sign In with Blockstack
           </button>

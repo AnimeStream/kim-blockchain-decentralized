@@ -8,7 +8,7 @@ const LoginPage = (props) => {
     return (
         <>
             <div className='container'>
-                <Login />
+                <Login {...props}/>
             </div>
         </>
     )
