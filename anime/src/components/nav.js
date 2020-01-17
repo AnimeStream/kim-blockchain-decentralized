@@ -17,7 +17,7 @@ const Nav = ({ signOut,user }) => {
             key: 'user',
             text: (
                 <span>
-                    Signed in as <strong>Bob Smith</strong>
+                    Signed in as <strong>{user.username.split('.')[0]}</strong>
                 </span>
             ),
             disabled: true,
